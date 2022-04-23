@@ -3,19 +3,19 @@ import { Category, Product, Tag } from "@/services/types";
 
 namespace publicProduct {
   export const categoryListNp = (): Promise<Category[]> => {
-    return http.get<Category[]>(`/public/product/category/list-np`, {});
+    return http.get<Category[]>(`/xxx/category/list-np`, {});
   };
 
   export const productById = (id: number): Promise<Product> => {
-    return http.get<Product>(`/public/product/get/${id}`, {});
+    return http.get<Product>(`/xxx/get/${id}`, {});
   };
 
   export const productListNp = (): Promise<Product[]> => {
-    return http.get<Product[]>(`/public/product/list-np`, {});
+    return http.get<Product[]>(`/xxx/list-np`, {});
   };
 
   export const productTagListNp = (): Promise<Tag[]> => {
-    return http.get<Tag[]>(`/public/product/tag/list-np`, {});
+    return http.get<Tag[]>(`/xxx/tag/list-np`, {});
   };
 }
 

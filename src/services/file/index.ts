@@ -14,7 +14,7 @@ namespace file {
     body.append("file", file);
     body.append("bucket_name", bucket_name);
 
-    return http.post<FileRecord>("file/upload", { body });
+    return http.post<FileRecord>("xxx/upload", { body });
   };
 
   export const uploads = async ({
@@ -30,7 +30,7 @@ namespace file {
       body.append("bucket_name", bucket_name);
     });
 
-    return http.post<FileRecord[]>("file/multi/upload", { body });
+    return http.post<FileRecord[]>("xxx/multi/upload", { body });
   };
 
   export const isUploadAble = (file?: any, limit = 10485760) => {

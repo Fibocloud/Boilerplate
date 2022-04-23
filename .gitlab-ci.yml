@@ -1,0 +1,14 @@
+stages:
+  - run
+
+main:
+  only:
+    - main
+  stage: run
+  script:
+    - docker build --build-arg BACK_URL=url --build-arg FILE_GET_URL=url -t admin-front .
+    - docker ps --quiet --filter="name=admin-front" | xargs --no-run-if-empty docker rm -f
+    - docker run -dt -p 3000:80 --restart always --name admin-front admin-front
+    - docker image prune -f
+  tags:
+    - some-runner-tag

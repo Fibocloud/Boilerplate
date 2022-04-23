@@ -1,0 +1,8 @@
+node_modules
+dist
+yarn-error.log
+yarn.lock
+.env
+.idea
+test.json
+src/services/doc.json
